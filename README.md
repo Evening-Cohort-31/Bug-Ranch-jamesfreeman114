@@ -25,6 +25,9 @@ Here are your learning objectives for this self-assessment.
 1. Able to use the debugger to step through existing code to discover root causes of bugs.
 2. Drawing a sequence diagram for a project.
    > Use the [sequencediagram.org](https://sequencediagram.org/) site to generate your sequence diagram. Make sure you save your work as you go.
+
+   Link to Sequence Diagram: https://tinyurl.com/224d7d63
+
 3. Demonstrate learning efficiency by researching concepts you haven't seen before using your peers, mentors, and the World Wide Web as resources.
 4. Awareness of when you need help, and then seeking it out.
 
@@ -76,11 +79,17 @@ Your journey will take you through the wildness of the American Midwest and acro
 ```
 
 1. In the **main** module, one of the first lines of code is `const drovers = hireDrovers(cattleToDrive)`. Explain what the value of the `drovers` variable is when that line of code runs.
-   > Your answer here
+   
+   The value of the `drovers` variable on this line of code is where we store the output from calling the function `hireDrovers()` using the variable `cattleToDrive` as the argument.
+
 2. At the bottom of the main module, you will see the following code - `for (const drover of drovers)`. Explain what the values of both the `drover` and the `drovers` variables are.
-   > Your answer here
+  
+   This line of code is a for..of loop that references an entire the array of objects titled `drovers` The variable `drover` represents each object as the loop passes through the entire array. 
+
 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a variable named `areas` which will have the value of an object. Use your debugger to show what the value of each key is on that object. Use [Loom](https://www.loom.com) to record your session.
-   > Your public Loom URL here
+  
+   [> Your public Loom URL here](https://www.loom.com/share/13af5482536d4bdd83990aaccb87cd2d?sid=5b6c2258-760c-4009-aaa0-4d984362f3b9)
+
 4. Also in the **journey** module, there is the following code:
    ```js
    for (let forestNumber = 0; forestNumber < areas.forests; forestNumber++) {
@@ -88,11 +97,17 @@ Your journey will take you through the wildness of the American Midwest and acro
    }
    ```
    Explain this code with your best vocabulary.
-   > Your answer here
+
+   This line of code is a for loop that first declares a variable called "forestNumber" with a value of 0. This variable can be changed since it was declared using "let." The next step in the loop is the condition "forestNumber < areas.forests;" This part of the code checks the current value of forestNumber and sees if it is less than the current value of "forests" in the "areas" object. The final part of the loop "forestNumber++" will increase the value of forestNumber by 1 if the previous condition is true. After the loop completes, the string "forest" is added to the "journey" array using the .push method. The loop will continue to repeat until the condition "forestNumber < areas.forests; is no longer true.
+
 5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
-   > Your answer here
+
+   The `database` variable in this module is an object that contains all of the information from the two arrays in the module: `cattleTypes` and `drovers.` Each array is made up of objects: `cattleTypes` contains information about the different kinds of cattle each stored in their own object with an id key and a breed key. `drovers` contains information for each drover stored in their own objects with id, first name, last name, and gender keys. Even though both arrays are made up of multiple objects themselves, all of the information from both of them can be stored in a single variable to easily export to other modules in the workspace. The data from these two arrays can now be used in other modules to create functions without having to copy the entire block of data each time.  
+
+
 6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
-   > Your answer here
+  
+  In this line of code `(herdSize)` is defining a parameter for the function `hireDrovers().` It's value can be changed as different arguments are passed into the function when it is called later on. 
 
 ## When You Are Done
 
